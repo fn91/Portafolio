@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Claudio Fanelli Rodríguez - Desarrollador Full-Stack Junior especializado en Front-End. Creando experiencias web de alto impacto, accesibles y optimizadas." />
+    <meta name="keywords" content="Desarrollador Web, Front-End, React, JavaScript, Astro, Python, UX/UI, Madrid, España" />
+    <meta name="author" content="Claudio Fanelli Rodríguez" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Claudio Fanelli Rodríguez | Desarrollador Web & UI Specialist" />
+    <meta property="og:description" content="Especialista en interfaces modernas con React, Astro y JavaScript. Conoce mis proyectos y escala tu próximo desafío conmigo." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://claudiofanelli.dev" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Claudio Fanelli Rodríguez | Desarrollador Web & UI Specialist" />
+    <meta name="twitter:description" content="Especialista en interfaces modernas con React, Astro y JavaScript." />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- LCP image: FIRST in head for earliest discovery -->
+    <link rel="preload" as="image" href="/foto-perfil.jpg" fetchpriority="high" />
+
+    <!-- Critical CSS: inline hero styles to avoid FOUC and render-blocking -->
+    <style>
+      html,body{margin:0;padding:0;background:#fff;color:#111;font-family:system-ui,-apple-system,sans-serif}
+      .dark html,.dark body{background:#0a0a0a;color:#f3f4f6}
+      #root{min-height:100vh}
+      .hero-grid{position:absolute;inset:0;opacity:0.03;background-image:linear-gradient(rgba(0,0,0,1) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,1) 1px,transparent 1px);background-size:60px 60px}
+      .dark .hero-grid{opacity:0.05}
+    </style>
+
+    <!-- Fonts: non-render-blocking -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    </noscript>
+
+    <title>Claudio Fanelli Rodríguez | Desarrollador Web & UI Specialist</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+{
+  "personal": {
+    "name": "Claudio Fanelli Rodríguez",
+    "title": "Front-End Developer | React Developer | UI Specialist",
+    "longBio": "Soy Claudio, desarrollador Front-End con formación en Desarrollo de Aplicaciones Multiplataforma (DAM). Mi pasión es transformar ideas en interfaces web modernas, accesibles y optimizadas.\n\nA lo largo de mi formación he desarrollado proyectos personales que me han permitido aplicar tecnologías como React, Astro, Tailwind CSS y JavaScript en situaciones reales. Cada proyecto es una oportunidad para aprender y mejorar.\n\nActualmente busco mi primera oportunidad profesional donde pueda seguir creciendo como desarrollador, aportar valor desde el primer día y trabajar en equipo para crear productos digitales de calidad.",
+    "philosophy": "Soluciones modernas • Código limpio • Interfaces intuitivas",
+    "goals": [
+      "Obtener mi primera experiencia profesional como Front-End Developer",
+      "Seguir aprendiendo y mejorando mis habilidades técnicas",
+      "Contribuir a proyectos que generen impacto real",
+      "Trabajar en equipo y aprender de desarrolladores senior"
+    ],
+    "whatIOffer": "Lo que aporto",
+    "offerItems": [
+      { "title": "Aprendizaje rápido", "desc": "Nuevos stacks y flujos de trabajo" },
+      { "title": "Código limpio", "desc": "Principios SOLID y Clean Code" },
+      { "title": "Accesibilidad", "desc": "Interfaces WCAG AA" },
+      { "title": "Proactividad", "desc": "Identifico y ejecuto mejoras" }
+    ],
+    "aboutSubtitle": "en búsqueda de mi primera oportunidad",
+    "bio": "Desarrollador Front-End en formación, apasionado por crear interfaces modernas, accesibles y de alto rendimiento.",
+    "country": "España",
+    "schedule": "Disponible para nuevos desafíos"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "technologies": "Habilidades",
+    "projects": "Proyectos",
+    "experience": "Formación",
+    "services": "Servicios",
+    "skills": "Skills",
+    "blog": "Blog",
+    "testimonials": "Principios",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "available": "Activo para nuevos desafíos profesionales",
+    "greeting": "Hola, soy",
+    "bio": "Desarrollador apasionado por la convergencia entre el diseño funcional y el rendimiento técnico. Transformo ideas complejas en interfaces fluidas, accesibles y altamente eficientes.",
+    "downloadCV": "Descargar CV",
+    "contact": "¿Hablamos?",
+    "scroll": "Scroll",
+    "altPhoto": "Foto de perfil de Claudio Fanelli Rodríguez"
+  },
+  "about": {
+    "tag": "01",
+    "title": "Sobre mí",
+    "philosophy": "Filosofía",
+    "goals": "Objetivos"
+  },
+  "technologies": {
+    "tag": "02",
+    "title": "Habilidades",
+    "subtitle": "Lenguajes, frameworks y herramientas que domino",
+    "all": "Todos",
+    "categories": {
+      "Todos": "Todos",
+      "Frontend": "Frontend",
+      "Estilos": "Estilos",
+      "Frameworks": "Frameworks",
+      "Backend": "Backend",
+      "Herramientas": "Herramientas",
+      "Diseño": "Diseño",
+      "Deploy": "Deploy"
+    }
+  },
+  "projects": {
+    "tag": "03",
+    "title": "Proyectos",
+    "subtitle": "Proyectos en desarrollo y prácticas personales",
+    "all": "Todos",
+    "demo": "Demo",
+    "code": "Código",
+    "caseStudy": "Caso de estudio",
+    "completed": "Completado",
+    "inDevelopment": "En desarrollo",
+    "categories": {
+      "Todos": "Todos",
+      "React": "React",
+      "HTML": "HTML",
+      "JavaScript": "JavaScript",
+      "CSS": "CSS"
+    }
+  },
+  "experience": {
+    "tag": "04",
+    "title": "Formación",
+    "responsibilities": "Responsabilidades",
+    "achievements": "Logros",
+    "education": "Trayectoria Académica"
+  },
+  "stats": {
+    "projects": "Proyectos",
+    "techs": "Tecnologías",
+    "education": "Formación",
+    "certs": "Certificaciones",
+    "repos": "Repositorios",
+    "languages": "Idiomas"
+  },
+  "services": {
+    "tag": "05",
+    "title": "Servicios",
+    "subtitle": "Soluciones digitales completas para hacer crecer tu negocio",
+    "items": [
+      { "title": "Desarrollo Front-End", "desc": "Desarrollo de interfaces modernas, accesibles y optimizadas con React, Astro y las últimas tecnologías.", "features": ["React & Astro", "Tailwind CSS", "Accesibilidad", "Responsive Design"] },
+      { "title": "UI/UX Design", "desc": "Diseño de interfaces centradas en el usuario con altos estándares de accesibilidad y usabilidad.", "features": ["Figma", "Prototipado", "User Research", "Design Systems"] },
+      { "title": "Optimización Web", "desc": "Mejora de rendimiento, SEO técnico y velocidad de carga para aplicaciones web.", "features": ["Performance", "SEO", "Core Web Vitals", "Lighthouse"] },
+      { "title": "Arquitectura de Componentes", "desc": "Diseño de sistemas de componentes modulares, reutilizables y escalables.", "features": ["SOLID", "Clean Code", "Reusable Components", "Testing"] },
+      { "title": "Integración de APIs", "desc": "Consumo e integración de APIs REST y servicios externos en aplicaciones web.", "features": ["REST APIs", "Fetch", "Async/Await", "Error Handling"] },
+      { "title": "Consultoría Técnica", "desc": "Asesoría técnica para equipos sobre arquitectura, mejores prácticas y optimización.", "features": ["Code Review", "Arquitectura", "Mentoría", "Best Practices"] }
+    ]
+  },
+  "skills": {
+    "tag": "06",
+    "title": "Skills",
+    "subtitle": "Habilidades técnicas y blandas que definen mi perfil profesional",
+    "items": [
+      { "name": "React", "level": 85 },
+      { "name": "JavaScript", "level": 82 },
+      { "name": "HTML/CSS", "level": 95 },
+      { "name": "Tailwind CSS", "level": 88 },
+      { "name": "UI/UX Design", "level": 72 },
+      { "name": "Git/GitHub", "level": 80 },
+      { "name": "Astro", "level": 75 },
+      { "name": "Resolución de problemas", "level": 88 },
+      { "name": "Trabajo en equipo", "level": 90 }
+    ]
+  },
+  "blog": {
+    "tag": "07",
+    "title": "Artículos",
+    "subtitle": "Reflexiones sobre desarrollo y tecnología",
+    "readMore": "Leer más",
+    "items": [
+      { "title": "StateFlow: Visualizando el Estado en React", "excerpt": "Cómo creé un visualizador arquitectónico para ilustrar el flujo de datos unidireccional en aplicaciones React.", "category": "React", "readTime": "8 min" },
+      { "title": "DecisionLab: Algoritmos para Decisiones Racionales", "excerpt": "Implementación de una matriz de decisión ponderada para mitigar sesgos cognitivos en la toma de decisiones.", "category": "JavaScript", "readTime": "6 min" },
+      { "title": "Swiss Style en CSS: El Diseño de ClimaApp", "excerpt": "Cómo apliqué los principios del diseño suizo para crear un dashboard meteorológico con estética internacional.", "category": "CSS", "readTime": "5 min" },
+      { "title": "React 19 en Acción: Mi Ecommerce Premium", "excerpt": "Experiencias y aprendizajes al construir una plataforma de comercio electrónico con React 19 y Zustand.", "category": "React", "readTime": "7 min" }
+    ]
+  },
+  "testimonials": {
+    "tag": "08",
+    "title": "Principios de Desarrollo",
+    "subtitle": "Los pilares que guían mi trabajo",
+    "prev": "Testimonio anterior",
+    "next": "Siguiente testimonio",
+    "goTo": "Ir al testimonio",
+    "stars": "de 5 estrellas",
+    "items": [
+      { "name": "Principio de Desarrollo", "company": "Metodología", "role": "Rigor Didáctico", "opinion": "Escribo código asumiendo que alguien más (o yo mismo en el futuro) lo mantendrá. Nombramiento semántico, modularidad y documentación clara son pilares en cada línea que programo." },
+      { "name": "Compromiso de Calidad", "company": "Estándares", "role": "Mentalidad Profesionalista", "opinion": "Mi estándar no es 'que funcione', sino que sea excelente. Aplico principios de Clean Code y escalabilidad incluso en mis proyectos más pequeños, preparándome para entornos de alto nivel." },
+      { "name": "Crecimiento Continuo", "company": "Aprendizaje", "role": "Autonomía y Aprendizaje", "opinion": "Gestiono mis proyectos con el rigor de una empresa: control de versiones sistemático, optimización de recursos y una curiosidad insaciable por las mejores prácticas del sector." }
+    ]
+  },
+  "contact": {
+    "tag": "09",
+    "title": "Contacto",
+    "subtitle": "¿Hablamos de tu próximo proyecto?",
+    "info": "Información de contacto",
+    "address": "Ubicación",
+    "phone": "Teléfono",
+    "email": "Email",
+    "schedule": "Disponibilidad",
+    "name": "Nombre",
+    "company": "Empresa",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "send": "Enviar mensaje",
+    "sending": "Enviando...",
+    "success": "Se ha preparado el correo en tu aplicación de email.",
+    "mapTitle": "Mapa mostrando ubicación en Madrid",
+    "placeholder": {
+      "name": "Tu nombre",
+      "email": "tu@email.com",
+      "company": "Nombre de tu empresa",
+      "subject": "¿En qué puedo ayudarte?",
+      "message": "Cuéntame sobre tu proyecto..."
+    }
+  },
+  "social": {
+    "title": "Conéctate conmigo",
+    "subtitle": "Sígueme en mis redes sociales"
+  },
+  "links": {
+    "title": "Enlaces importantes",
+    "subtitle": "Acceso rápido a mis plataformas y recursos",
+    "portfolio": "Portafolio",
+    "cv": "Currículum",
+    "blog": "Blog"
+  },
+  "footer": {
+    "navigation": "Navegación",
+    "servicesTitle": "Servicios",
+    "contactTitle": "Contacto",
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Política de privacidad",
+    "terms": "Términos y condiciones",
+    "servicesList": ["Desarrollo Web", "React Apps", "Dashboards", "Integración IA", "Consultoría"]
+  },
+  "command": {
+    "placeholder": "Buscar secciones, proyectos...",
+    "navigation": "Navegación",
+    "actions": "Acciones",
+    "theme": "Cambiar tema",
+    "copyEmail": "Copiar email",
+    "language": "Cambiar idioma",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "focus": {
+    "hint": "Presiona Shift+F para modo Focus"
+  },
+  "scrollToTop": {
+    "label": "Volver arriba"
+  },
+  "loader": {
+    "label": "Cargando página"
+  }
+}
