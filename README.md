@@ -6,7 +6,7 @@ Portafolio web moderno, responsive y accesible desarrollado con React, TypeScrip
 
 Este proyecto es el portafolio personal de **Claudio Fanelli Rodríguez**, desarrollador Front-End en formación. Está enfocado a mostrar proyectos, tecnologías, formación y una vía de contacto clara para procesos de selección junior.
 
-**En vivo:** [https://claudiofanelli.dev](https://claudiofanelli.dev)
+**En vivo:** [(https://portafolio220.netlify.app)]
 
 ## Tecnologías
 
