@@ -199,6 +199,107 @@
   50% { transform: translateY(-12px); }
 }
 
+.hero-title {
+  font-size: clamp(1.875rem, 7.5vw, 4.5rem);
+  overflow-wrap: anywhere;
+}
+
+/* El último apellido puede pasar entero a la línea siguiente. */
+.hero-title > span:last-child {
+  display: inline-block;
+  max-width: 100%;
+}
+
+@media (min-width: 900px) {
+  .hero-title {
+    font-size: clamp(3.25rem, 6.65vw, 6rem);
+  }
+}
+
+/* Las entradas laterales conservan su recorrido dentro de cada sección. */
+#about,
+#contact {
+  overflow-x: clip;
+}
+
+@media (width < 1025px) {
+  .portfolio-nav button {
+    min-height: 2.75rem;
+    min-width: 2.75rem;
+  }
+
+  main > section {
+    scroll-margin-top: 4.125rem;
+  }
+
+  main > section.py-32 {
+    padding-block: clamp(3.5rem, 8vw, 6rem);
+  }
+
+  main > section > .pt-32 {
+    padding-top: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  main > section .mb-20 {
+    margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  main .section-subtitle {
+    margin-bottom: 0;
+  }
+
+  #technologies button,
+  #projects button {
+    min-height: 2.75rem;
+  }
+}
+
+@media (width < 1025px) and (height <= 420px) {
+  .chat-panel {
+    top: 4.5rem;
+    bottom: 0.75rem;
+    z-index: 51;
+    width: 32rem;
+    height: auto;
+    max-height: none;
+  }
+}
+
+@media (width <= 480px) {
+  .hero-actions {
+    gap: 0.75rem;
+  }
+
+  .hero-actions > :is(a, button) {
+    flex: 1 0 11rem;
+    justify-content: center;
+    padding-inline: 0.875rem;
+  }
+
+  .hero-actions svg {
+    flex-shrink: 0;
+  }
+
+  #hero :is(h1, p) {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.875rem, 8vw, 2.25rem);
+    overflow-wrap: anywhere;
+  }
+
+  #technologies .grid > * {
+    min-width: 0;
+    padding-inline: 0.75rem;
+    overflow-wrap: anywhere;
+  }
+
+  #contact :is(input, textarea) {
+    font-size: 1rem;
+  }
+}
+
 @keyframes gradient-shift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }

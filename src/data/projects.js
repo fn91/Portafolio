@@ -21,7 +21,6 @@ export const projects = [
     category: "React",
     status: "Completado",
     date: "2025",
-    demo: "https://decision-lab-git-decision-claudios-projects-f9f35c91.vercel.app",
     github: "https://github.com/fn91/decision-lab",
     featured: true,
   },
@@ -76,4 +75,4 @@ export const projects = [
   },
 ];
 
-export const projectCategories = ["Todos", "React", "HTML", "JavaScript", "CSS"];
+export const projectCategories = ["Todos", ...new Set(projects.map((project) => project.category))];

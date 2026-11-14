@@ -11,7 +11,7 @@ export function NotFound() {
           transition={{ duration: 0.6 }}
         >
           <span
-            className="text-[120px] md:text-[200px] font-bold leading-none text-gray-100 dark:text-gray-900"
+            className="text-[clamp(5rem,28vw,7.5rem)] md:text-[200px] font-bold leading-none text-gray-100 dark:text-gray-900"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             404
@@ -38,7 +38,7 @@ export function NotFound() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex gap-4 justify-center"
+          className="flex flex-wrap gap-4 justify-center"
         >
           <Link
             to="/"

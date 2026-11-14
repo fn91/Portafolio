@@ -51,10 +51,6 @@ export function CommandPalette() {
     { id: "technologies", label: "Technologies" },
     { id: "projects", label: "Projects" },
     { id: "experience", label: "Experience" },
-    { id: "services", label: "Services" },
-    { id: "skills", label: "Skills" },
-    { id: "blog", label: "Blog" },
-    { id: "testimonials", label: "Testimonials" },
     { id: "contact", label: "Contact" },
   ];
 
@@ -109,7 +105,7 @@ export function CommandPalette() {
           />
 
           {/* Command palette */}
-          <div className="fixed top-[20%] left-1/2 -translate-x-1/2 z-[95] w-full max-w-lg animate-[scaleIn_0.15s_ease-out]">
+          <div className="fixed top-[20%] max-[1025px]:top-[clamp(4.5rem,15dvh,20%)] left-1/2 -translate-x-1/2 z-[95] w-full max-w-lg max-[540px]:w-[calc(100%-2rem)] animate-[scaleIn_0.15s_ease-out]">
             <div className="bg-white dark:bg-[#0a0a0a] border border-black/10 dark:border-white/10 shadow-2xl overflow-hidden">
               <input
                 ref={inputRef}
@@ -117,9 +113,9 @@ export function CommandPalette() {
                 onChange={(e) => { setQuery(e.target.value); setSelectedIndex(0); }}
                 onKeyDown={handleKeyDown}
                 placeholder="Search sections, projects..."
-                className="w-full px-4 py-3 bg-transparent border-b border-black/5 dark:border-white/5 text-sm focus:outline-none"
+                className="w-full px-4 py-3 bg-transparent border-b border-black/5 dark:border-white/5 text-sm max-[481px]:text-base focus:outline-none"
               />
-              <div className="max-h-[300px] overflow-y-auto p-2">
+              <div className="max-h-[300px] max-[1025px]:max-h-[min(18.75rem,55dvh)] overflow-y-auto p-2">
                 {allItems.length === 0 && (
                   <div className="py-6 text-center text-sm text-gray-400">
                     No results found.

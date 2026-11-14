@@ -51,9 +51,9 @@ export default function Navbar() {
       </div>
 
       <nav
-        className={`fixed top-[2px] left-0 right-0 z-50 transition-all duration-500 animate-[slideDown_0.5s_ease-out] ${
+        className={`portfolio-nav fixed top-[2px] left-0 right-0 z-50 max-[1025px]:z-[53] transition-all duration-500 animate-[slideDown_0.5s_ease-out] ${
           scrolled
-            ? "bg-white/90 dark:bg-[#0a0a0a]/90 backdrop-blur-xl border-b border-black/5 dark:border-white/5"
+            ? "bg-white/90 dark:bg-[#0a0a0a]/90 min-[1025px]:backdrop-blur-xl max-[1025px]:before:absolute max-[1025px]:before:inset-0 max-[1025px]:before:-z-10 max-[1025px]:before:backdrop-blur-xl border-b border-black/5 dark:border-white/5"
             : "bg-transparent"
         }`}
       >
@@ -70,7 +70,7 @@ export default function Navbar() {
             </a>
 
             {/* Desktop nav */}
-            <div className="hidden lg:flex items-center gap-1">
+            <div className="hidden min-[1025px]:flex items-center gap-1">
               {navLinks.map((link) => (
                 <button
                   key={link.id}
@@ -103,7 +103,7 @@ export default function Navbar() {
               {/* Mobile menu button */}
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="lg:hidden w-9 h-9 rounded-full border border-black/10 dark:border-white/10 flex items-center justify-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
+                className="min-[1025px]:hidden w-9 h-9 rounded-full border border-black/10 dark:border-white/10 flex items-center justify-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
                 aria-label="Toggle menu"
               >
                 {isOpen ? <HiX size={16} /> : <HiMenu size={16} />}
@@ -115,9 +115,9 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="fixed inset-0 z-40 lg:hidden animate-[fadeIn_0.2s_ease-out]">
+        <div className="fixed inset-0 z-[52] min-[1025px]:hidden animate-[fadeIn_0.2s_ease-out]">
           <div className="absolute inset-0 bg-black/20 backdrop-blur-sm" onClick={() => setIsOpen(false)} />
-          <div className="absolute right-0 top-0 bottom-0 w-80 bg-white dark:bg-[#0a0a0a] border-l border-black/5 dark:border-white/5 p-8 pt-24 animate-[slideInRight_0.3s_ease-out]">
+          <div className="absolute right-0 top-0 bottom-0 w-80 max-w-[calc(100%-2.75rem)] overflow-y-auto overscroll-contain bg-white dark:bg-[#0a0a0a] border-l border-black/5 dark:border-white/5 px-5 sm:px-8 pb-6 pt-20 animate-[slideInRight_0.3s_ease-out]">
             <div className="flex flex-col gap-1">
               {navLinks.map((link, i) => (
                 <button

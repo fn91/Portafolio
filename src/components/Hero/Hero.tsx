@@ -48,20 +48,20 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center">
+    <section id="hero" className="relative min-h-screen max-[1025px]:min-h-svh overflow-x-clip flex items-center justify-center">
       {/* Subtle grid background */}
       <div className="hero-grid" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20">
-        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 animate-[fadeIn_0.6s_ease-out]">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-20">
+        <div className="flex flex-col min-[900px]:flex-row items-center gap-10 min-[1025px]:gap-16 animate-[fadeIn_0.6s_ease-out]">
           {/* Text content */}
-          <div className="flex-1 text-center lg:text-left animate-[slideInLeft_0.6s_ease-out_0.1s_both]">
+          <div className="min-w-0 max-w-full flex-1 text-center min-[900px]:text-left animate-[slideInLeft_0.6s_ease-out_0.1s_both]">
             <div className="mb-8 animate-[fadeIn_0.6s_ease-out_0.2s_both]">
               <span className="tag">{t("hero.available")}</span>
             </div>
 
             <h1
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-8 animate-[fadeInUp_0.6s_ease-out_0.3s_both]"
+              className="hero-title font-bold leading-[1.1] mb-8 animate-[fadeInUp_0.6s_ease-out_0.3s_both]"
               style={{ fontFamily: "'Space Grotesk', sans-serif", letterSpacing: '-0.04em' }}
             >
               {t("hero.greeting")}
@@ -78,12 +78,12 @@ export default function Hero() {
             </div>
 
             <p
-              className="text-base text-gray-500 dark:text-gray-400 max-w-lg mx-auto lg:mx-0 mb-10 leading-relaxed animate-[fadeInUp_0.6s_ease-out_0.5s_both]"
+              className="text-base text-gray-500 dark:text-gray-400 max-w-lg mx-auto min-[900px]:mx-0 mb-10 leading-relaxed animate-[fadeInUp_0.6s_ease-out_0.5s_both]"
             >
               {t("hero.bio")}
             </p>
 
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-[fadeInUp_0.6s_ease-out_0.6s_both]">
+            <div className="hero-actions flex flex-wrap gap-4 justify-center min-[900px]:justify-start animate-[fadeInUp_0.6s_ease-out_0.6s_both]">
               <a
                 href="/cv/CV-Claudio-Fanelli-Frontend-DAM.pdf"
                 target="_blank"
@@ -113,14 +113,14 @@ export default function Hero() {
           </div>
 
           {/* Avatar */}
-          <div className="flex-shrink-0 animate-[slideInRight_0.6s_ease-out_0.2s_both]">
+          <div className="shrink-0 max-w-[calc(100%-2.5rem)] animate-[slideInRight_0.6s_ease-out_0.2s_both]">
             <div className="relative">
               <img
                 src="/foto-perfil.jpg"
                 alt={t("hero.altPhoto")}
                 loading="eager"
                 fetchPriority="high"
-                className="w-64 h-auto sm:w-80 lg:w-[360px] animate-[float_5s_ease-in-out_infinite] will-change-transform"
+                className="w-[clamp(13rem,58vw,16rem)] h-auto sm:max-[900px]:w-80 min-[900px]:w-[clamp(18rem,32vw,22.5rem)] animate-[float_5s_ease-in-out_infinite] will-change-transform"
               />
 
               {/* Corner accents */}

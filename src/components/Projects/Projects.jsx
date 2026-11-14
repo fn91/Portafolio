@@ -52,7 +52,7 @@ export default function Projects() {
           </motion.div>
 
           {/* Project cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-black/10 dark:bg-white/10">
+          <div className="grid min-[600px]:grid-cols-2 min-[1025px]:grid-cols-3 gap-[1px] bg-black/10 dark:bg-white/10">
             <AnimatePresence mode="wait">
               {filtered.map((project) => (
                 <motion.div
@@ -65,7 +65,7 @@ export default function Projects() {
                   className="bg-white dark:bg-[#0a0a0a] group relative"
                 >
                   {/* Image */}
-                  <div className="relative h-56 overflow-hidden bg-gray-100 dark:bg-[#141414]">
+                  <div className="relative h-56 max-[481px]:h-auto max-[481px]:aspect-video overflow-hidden bg-gray-100 dark:bg-[#141414]">
                     <img
                       src={project.image}
                       alt={`Vista previa de ${project.title}`}
@@ -82,7 +82,7 @@ export default function Projects() {
                     </div>
 
                     {/* Hover overlay */}
-                    <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-90 transition-opacity duration-500 flex items-center justify-center gap-4">
+                    <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-90 transition-opacity duration-500 flex items-center justify-center gap-4 focus-within:opacity-90 [@media(hover:none)]:opacity-100 [@media(hover:none)]:bg-transparent [@media(hover:none)]:items-end [@media(hover:none)]:justify-start [@media(hover:none)]:p-3">
                       {project.demo && (
                         <motion.a
                           href={project.demo}
@@ -90,7 +90,7 @@ export default function Projects() {
                           rel="noopener noreferrer"
                           whileHover={{ scale: 1.1 }}
                           aria-label={`${t("projects.demo")} - ${project.title}`}
-                          className="w-12 h-12 border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all"
+                          className="w-12 h-12 border border-white/30 flex items-center justify-center text-white [@media(hover:none)]:bg-black/80 hover:bg-white hover:text-black transition-all"
                         >
                           <FiExternalLink size={18} aria-hidden="true" />
                         </motion.a>
@@ -102,7 +102,7 @@ export default function Projects() {
                           rel="noopener noreferrer"
                           whileHover={{ scale: 1.1 }}
                           aria-label={`${t("projects.code")} - ${project.title}`}
-                          className="w-12 h-12 border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all"
+                          className="w-12 h-12 border border-white/30 flex items-center justify-center text-white [@media(hover:none)]:bg-black/80 hover:bg-white hover:text-black transition-all"
                         >
                           <FiGithub size={18} aria-hidden="true" />
                         </motion.a>
@@ -114,7 +114,7 @@ export default function Projects() {
                           rel="noopener noreferrer"
                           whileHover={{ scale: 1.1 }}
                           aria-label={`${t("projects.caseStudy")} - ${project.title}`}
-                          className="w-12 h-12 border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all"
+                          className="w-12 h-12 border border-white/30 flex items-center justify-center text-white [@media(hover:none)]:bg-black/80 hover:bg-white hover:text-black transition-all"
                         >
                           <FiBookOpen size={18} aria-hidden="true" />
                         </motion.a>

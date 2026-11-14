@@ -6,7 +6,7 @@ Portafolio web moderno, responsive y accesible desarrollado con React, TypeScrip
 
 Este proyecto es el portafolio personal de **Claudio Fanelli Rodríguez**, desarrollador Front-End en formación. Está enfocado a mostrar proyectos, tecnologías, formación y una vía de contacto clara para procesos de selección junior.
 
-**En vivo:** [(https://portafolio220.netlify.app)]
+**En vivo:** [Portafolio en Netlify](https://portafolio220.netlify.app)
 
 ## Tecnologías
 
@@ -17,7 +17,7 @@ Este proyecto es el portafolio personal de **Claudio Fanelli Rodríguez**, desar
 | Vite | 8.x | Build tool |
 | Tailwind CSS | 4 | Estilos |
 | Framer Motion | 12 | Animaciones |
-| i18next | Latest | Internacionalización (ES/EN) |
+| i18next | 26 | Traducciones en español |
 | React Hook Form / Zod | — | No incluidos actualmente |
 | cmdk | — | No incluido actualmente; la navegación utiliza un componente propio |
 
@@ -43,15 +43,22 @@ El componente se encuentra en `src/components/LoadingScreen/LoadingScreen.tsx`.
 - Animaciones al hacer scroll con Framer Motion
 - Cursor personalizado en desktop
 - **Loading screen estilo terminal/IDE** con efecto de escritura de código, syntax highlighting, scan lines, grid background y glitch effect al completar
-- Command Palette (⌘K / Ctrl+K)
-- Dock de navegación
-- Modo Focus (Shift+F)
-- Totalmente responsive
+- Paleta de comandos (⌘K / Ctrl+K) para buscar secciones disponibles y acceder a acciones rápidas
+
+### Diseño adaptable
+
+- En móviles, la portada ajusta el título y el retrato al ancho disponible. El menú lateral se puede desplazar en pantallas bajas y los controles principales tienen más espacio para pulsarlos.
+- Las tarjetas de proyectos pasan de una columna en móvil a dos en tablet y tres en escritorio cuando hay espacio. Los enlaces de cada tarjeta quedan visibles en pantallas táctiles.
+- El chat se adapta a la altura disponible, incluida la orientación horizontal. La portada y las secciones mantienen la tipografía, la paleta y las animaciones originales.
+- La distribución se comprobó en Chrome a 320, 375, 390, 768, 1024 y 1440 px, sin desplazamiento horizontal en esos tamaños.
 
 ### Funcionalidades
-- **i18n**: Soporte bilingüe ES/EN con toggle
+- **i18n** en español mediante i18next
+- **Filtros de proyectos** generados a partir de las categorías que tienen proyectos
+- **Asistente de portfolio** con preguntas rápidas y respuestas sobre proyectos, tecnologías y contacto
+- **Enlaces de proyectos** a repositorios y demos públicas cuando están disponibles. DecisionLab enlaza al repositorio, ya que su demo requiere iniciar sesión en Vercel.
 - **Formulario de contacto**: Validación básica y apertura del cliente de correo mediante `mailto:`
-- **Páginas adicionales**: /now, /uses, /404
+- **Páginas adicionales**: `/now`, `/uses` y una página 404 para rutas desconocidas
 - **CV descargables**: CV de Front-End/DAM como opción principal y CV de Sistemas/Helpdesk como alternativa en `public/cv/`
 - **SEO optimizado**: Meta tags, Open Graph, Twitter Cards
 - **PWA**: Manifest para instalación
@@ -73,7 +80,7 @@ portfolio/
 │   └── manifest.json
 ├── src/
 │   ├── components/
-│   │   ├── Navbar/          # Navegación sticky
+│   │   ├── Navbar/          # Navegación fija y menú móvil
 │   │   ├── Hero/            # Sección principal
 │   │   ├── About/           # Sobre mí
 │   │   ├── Technologies/    # Habilidades técnicas
@@ -83,6 +90,7 @@ portfolio/
 │   │   ├── Footer/          # Pie de página
 │   │   ├── ScrollToTop/     # Botón volver arriba
 │   │   ├── LoadingScreen/   # Pantalla de carga animada estilo terminal
+│   │   ├── Chatbot.tsx      # Asistente del portafolio
 │   │   ├── ui/              # Componentes UI (cursor)
 │   │   └── command-palette.tsx
 │   ├── pages/
@@ -90,10 +98,9 @@ portfolio/
 │   │   ├── Now.tsx          # Qué estoy haciendo ahora
 │   │   └── Uses.tsx         # Herramientas que uso
 │   ├── context/
-│   │   └── ThemeContext.tsx  # Contexto de tema
+│   │   └── ThemeContext.jsx  # Contexto de tema
 │   ├── hooks/
-│   │   ├── useScroll.ts     # Hooks de scroll
-│   │   └── useFocusMode.ts  # Modo Focus
+│   │   └── useScroll.js     # Hooks de scroll
 │   ├── data/
 │   │   ├── personal.js      # Datos personales
 │   │   ├── projects.js      # Proyectos
@@ -102,8 +109,7 @@ portfolio/
 │   │   └── content.js       # Servicios, skills, etc.
 │   ├── i18n/
 │   │   ├── index.ts         # Config i18n
-│   │   ├── es.json          # Traducciones ES
-│   │   └── en.json          # Traducciones EN
+│   │   └── es.json          # Traducciones ES
 │   ├── animations/
 │   │   └── index.ts         # Variantes de animación
 │   ├── lib/
@@ -125,10 +131,10 @@ Las imágenes de los proyectos se encuentran en `public/projects/` y se sirven c
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/fn91/portfolio.git
+git clone https://github.com/fn91/Portafolio.git
 
 # Entrar al directorio
-cd portfolio
+cd Portafolio
 
 # Instalar dependencias
 pnpm install
@@ -147,13 +153,14 @@ El servidor estará disponible en `http://localhost:3000`
 | `pnpm build` | Build de producción |
 | `pnpm preview` | Vista previa del build |
 | `pnpm lint` | Ejecutar linter |
+| `pnpm exec tsc --noEmit` | Comprobar los tipos de TypeScript |
 
 ## Atajos de Teclado
 
 | Atajo | Acción |
 |-------|--------|
 | `⌘K` / `Ctrl+K` | Abrir Command Palette |
-| `Shift+F` | Modo Focus |
+| `↑` / `↓` y `Enter` | Seleccionar y ejecutar una opción de la paleta |
 | `Esc` | Cerrar Command Palette |
 
 ## Rutas
