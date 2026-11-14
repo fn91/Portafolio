@@ -66,14 +66,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-white/10 pt-8 text-center md:text-left">
           <p className="text-gray-600 text-xs">
             © {new Date().getFullYear()} {personalInfo.name}. {t("footer.rights")}
           </p>
-          <div className="flex gap-6 text-xs text-gray-600">
-            <a href="#" className="hover:text-white transition-colors">{t("footer.privacy")}</a>
-            <a href="#" className="hover:text-white transition-colors">{t("footer.terms")}</a>
-          </div>
         </div>
       </div>
     </footer>

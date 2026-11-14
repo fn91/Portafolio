@@ -112,7 +112,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 w-full max-w-lg px-6">
+      <div className="relative z-10 w-full max-w-lg px-6 max-[481px]:px-4">
         {/* Terminal window */}
         <div
           className="bg-black/50 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden shadow-2xl animate-[scaleIn_0.6s_ease-out]"
@@ -130,23 +130,23 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
           </div>
 
           {/* Code area */}
-          <div className="p-5 font-mono text-sm leading-relaxed min-h-[280px]">
+          <div className="p-5 font-mono text-sm leading-relaxed min-h-[280px] max-[481px]:min-h-0 max-[481px]:p-3 max-[481px]:text-xs [@media(max-height:420px)]:min-h-0 [@media(max-height:420px)]:py-3">
             {codeLines.slice(0, visibleLines).map((line, i) => (
               <div
                 key={i}
                 className="flex animate-[fadeIn_0.15s_ease-out]"
               >
-                <span className="text-neutral-600 w-8 text-right mr-4 select-none">
+                <span className="text-neutral-600 w-8 text-right mr-4 select-none shrink-0 max-[481px]:w-3 max-[481px]:mr-2">
                   {i + 1}
                 </span>
-                <span className="text-neutral-300">
+                <span className="min-w-0 wrap-anywhere text-neutral-300">
                   {highlightSyntax(line)}
                 </span>
               </div>
             ))}
             {phase === "typing" && (
               <div className="flex">
-                <span className="text-neutral-600 w-8 text-right mr-4 select-none">
+                <span className="text-neutral-600 w-8 text-right mr-4 select-none shrink-0 max-[481px]:w-3 max-[481px]:mr-2">
                   {visibleLines + 1}
                 </span>
                 <span

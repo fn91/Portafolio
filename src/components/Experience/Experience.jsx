@@ -29,24 +29,24 @@ export default function Experience() {
           {/* Timeline */}
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-[1px] bg-black/10 dark:bg-white/10" />
+            <div className="absolute left-0 min-[1025px]:left-1/2 top-0 bottom-0 w-[1px] bg-black/10 dark:bg-white/10" />
 
             {experience.map((exp, i) => (
               <motion.div
                 key={exp.id}
                 variants={fadeInUp}
-                className={`relative flex flex-col md:flex-row gap-8 mb-16 ${
-                  i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                className={`relative flex flex-col gap-8 mb-16 max-[1025px]:mb-10 ${
+                  i % 2 === 0 ? "min-[1025px]:flex-row" : "min-[1025px]:flex-row-reverse"
                 }`}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-0 md:left-1/2 -translate-x-1/2 w-3 h-3 bg-black dark:bg-white z-10" />
+                <div className="absolute left-0 min-[1025px]:left-1/2 -translate-x-1/2 w-3 h-3 bg-black dark:bg-white z-10" />
 
                 {/* Content card */}
-                <div className={`flex-1 ml-8 md:ml-0 ${i % 2 === 0 ? "md:pr-16" : "md:pl-16"}`}>
+                <div className={`min-w-0 flex-1 ml-8 max-[481px]:ml-5 min-[1025px]:ml-0 ${i % 2 === 0 ? "min-[1025px]:pr-16" : "min-[1025px]:pl-16"}`}>
                   <motion.div
                     whileHover={{ y: -2 }}
-                    className="bg-gray-50/50 dark:bg-[#141414] border border-black/5 dark:border-white/5 p-8"
+                    className="bg-gray-50/50 dark:bg-[#141414] border border-black/5 dark:border-white/5 p-8 max-[481px]:p-4 wrap-anywhere"
                   >
                     <div className="flex flex-wrap items-start justify-between gap-2 mb-6">
                       <div>
@@ -112,7 +112,7 @@ export default function Experience() {
           </div>
 
           {/* Education */}
-          <motion.div variants={fadeInUp} className="mt-32">
+          <motion.div variants={fadeInUp} className="mt-32 max-[1025px]:mt-16">
             <h3
               className="text-2xl font-bold mb-12"
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}

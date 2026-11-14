@@ -58,7 +58,7 @@ export default function Contact() {
           <div className="grid lg:grid-cols-5 gap-12">
             {/* Contact Info */}
             <motion.div variants={fadeInLeft} className="lg:col-span-2 space-y-6">
-              <div className="bg-white dark:bg-[#0a0a0a] border border-black/5 dark:border-white/5 p-8">
+              <div className="bg-white dark:bg-[#0a0a0a] border border-black/5 dark:border-white/5 p-8 max-[481px]:p-4">
                 <h3
                   className="font-bold text-lg mb-6"
                   style={{ fontFamily: "'Space Grotesk', sans-serif" }}
@@ -77,11 +77,11 @@ export default function Contact() {
                       <div className="w-10 h-10 border border-black/10 dark:border-white/10 flex items-center justify-center text-gray-400 dark:text-gray-500 flex-shrink-0">
                         {item.icon}
                       </div>
-                      <div>
+                      <div className="min-w-0">
                         <p className="text-[10px] uppercase tracking-[0.15em] text-gray-400 dark:text-gray-500 mb-0.5">
                           {item.label}
                         </p>
-                        <p className="text-sm font-medium">{item.value}</p>
+                        <p className="text-sm font-medium wrap-anywhere">{item.value}</p>
                       </div>
                     </div>
                   ))}
@@ -104,7 +104,7 @@ export default function Contact() {
 
             {/* Contact Form */}
             <motion.div variants={fadeInRight} className="lg:col-span-3">
-              <form ref={formRef} onSubmit={onSubmit} className="bg-white dark:bg-[#0a0a0a] border border-black/5 dark:border-white/5 p-8 space-y-6">
+              <form ref={formRef} onSubmit={onSubmit} className="bg-white dark:bg-[#0a0a0a] border border-black/5 dark:border-white/5 p-8 max-[481px]:p-4 space-y-6">
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="contact-name" className="block text-[10px] uppercase tracking-[0.15em] text-gray-400 dark:text-gray-500 mb-2">

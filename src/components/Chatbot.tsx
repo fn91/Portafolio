@@ -5,7 +5,7 @@ import { personalInfo } from "../data/personal";
 import { projects } from "../data/projects";
 import { services } from "../data/content";
 
-function generateResponse(message) {
+function generateResponse(message: string) {
   const lower = message.toLowerCase();
 
   // Saludos
@@ -74,7 +74,7 @@ export default function Chatbot() {
   ]);
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
-  const messagesEndRef = useRef(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -113,7 +113,7 @@ export default function Chatbot() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1, type: "spring" }}
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-black text-white dark:bg-white dark:text-black rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+        className="fixed bottom-6 right-6 max-[481px]:bottom-4 max-[481px]:right-4 z-50 w-14 h-14 bg-black text-white dark:bg-white dark:text-black rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
         aria-label={isOpen ? "Cerrar chat" : "Abrir chat"}
       >
         {isOpen ? <FiX size={22} /> : <FiMessageSquare size={22} />}
@@ -127,10 +127,10 @@ export default function Chatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="fixed bottom-24 right-6 z-50 w-[360px] max-w-[calc(100vw-3rem)] h-[500px] max-h-[calc(100vh-8rem)] shadow-2xl flex flex-col overflow-hidden border border-black/10 dark:border-white/10 bg-white dark:bg-[#0a0a0a]"
+            className="chat-panel fixed bottom-24 right-6 z-50 w-[360px] max-w-[calc(100%-3rem)] h-[500px] max-h-[calc(100vh-8rem)] max-[1025px]:max-h-[calc(100dvh-10.5rem)] max-[481px]:bottom-20 max-[481px]:max-h-[calc(100dvh-9.75rem)] max-[481px]:right-4 max-[481px]:max-w-[calc(100%-2rem)] shadow-2xl flex flex-col overflow-hidden border border-black/10 dark:border-white/10 bg-white dark:bg-[#0a0a0a]"
           >
             {/* Header */}
-            <div className="bg-black dark:bg-white p-4 flex items-center justify-between">
+            <div className="bg-black dark:bg-white p-4 max-[481px]:px-3 max-[481px]:py-2 [@media(max-height:420px)]:py-1 flex shrink-0 items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 bg-white/10 dark:bg-black/10 flex items-center justify-center text-white dark:text-black font-bold text-xs"
                   style={{ fontFamily: "'Space Grotesk', sans-serif" }}
@@ -144,7 +144,7 @@ export default function Chatbot() {
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-2 hover:bg-white/10 dark:hover:bg-black/10 text-white dark:text-black transition-colors"
+                className="p-2 max-[1025px]:min-h-11 max-[1025px]:min-w-11 max-[1025px]:grid max-[1025px]:place-items-center hover:bg-white/10 dark:hover:bg-black/10 text-white dark:text-black transition-colors"
                 aria-label="Cerrar chat"
               >
                 <FiX size={18} />
@@ -152,7 +152,7 @@ export default function Chatbot() {
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            <div className="min-h-0 flex-1 overflow-y-auto p-4 [@media(max-height:420px)]:py-2 space-y-4">
               {messages.map((msg, i) => (
                 <motion.div
                   key={i}
@@ -161,7 +161,7 @@ export default function Chatbot() {
                   className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   <div
-                    className={`max-w-[85%] px-4 py-3 text-sm whitespace-pre-line ${
+                    className={`max-w-[85%] px-4 py-3 text-sm whitespace-pre-line wrap-anywhere ${
                       msg.role === "user"
                         ? "bg-black text-white dark:bg-white dark:text-black"
                         : "bg-gray-100 dark:bg-[#141414] text-gray-800 dark:text-gray-200"
@@ -190,12 +190,12 @@ export default function Chatbot() {
             </div>
 
             {/* Quick questions */}
-            <div className="px-4 pb-2 flex flex-wrap gap-1.5">
+            <div className="px-4 pb-2 flex flex-wrap gap-1.5 max-[1025px]:max-h-[25dvh] max-[1025px]:overflow-y-auto">
               {quickQuestions.map((q) => (
                 <button
                   key={q}
                   onClick={() => setInput(q)}
-                  className="px-3 py-1 border border-black/10 dark:border-white/10 text-[11px] font-medium hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all"
+                  className="px-3 py-1 max-[1025px]:min-h-8 border border-black/10 dark:border-white/10 text-[11px] font-medium hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all"
                 >
                   {q}
                 </button>
@@ -203,7 +203,7 @@ export default function Chatbot() {
             </div>
 
             {/* Input */}
-            <div className="p-4 border-t border-black/5 dark:border-white/5">
+            <div className="shrink-0 p-4 [@media(max-height:420px)]:py-2 border-t border-black/5 dark:border-white/5">
               <form
                 onSubmit={(e) => { e.preventDefault(); handleSend(); }}
                 className="flex gap-2"
@@ -213,7 +213,7 @@ export default function Chatbot() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Escribe tu pregunta..."
-                  className="flex-1 px-4 py-3 bg-gray-50 dark:bg-[#141414] text-sm focus:outline-none border border-black/5 dark:border-white/5"
+                  className="min-w-0 flex-1 px-4 max-[481px]:px-2 py-3 bg-gray-50 dark:bg-[#141414] text-sm max-[481px]:text-base focus:outline-none border border-black/5 dark:border-white/5"
                 />
                 <motion.button
                   type="submit"
